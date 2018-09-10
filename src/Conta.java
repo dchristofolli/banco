@@ -1,8 +1,36 @@
 public class Conta {
     String conta;
+    String senha;
     String nome;
     double saldo;
     boolean especial;
+    double limite;
+
+
+    public Conta(String conta, String senha, String nome, double saldo, boolean especial, double limite) {
+        this.conta = conta;
+        this.senha = senha;
+        this.nome = nome;
+        this.saldo = saldo;
+        this.especial = especial;
+        this.limite = limite;
+    }
+
+    public double getLimite() {
+        return limite;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     @Override
     public String toString() {
@@ -14,12 +42,6 @@ public class Conta {
                 '}';
     }
 
-    public Conta(String conta, String nome, double saldo, boolean especial) {
-        this.conta = conta;
-        this.nome = nome;
-        this.saldo = saldo;
-        this.especial = especial;
-    }
 
     public String getConta() {
         return conta;
